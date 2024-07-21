@@ -25,8 +25,11 @@ print(new_prices)
 # creating a new variable total_revenue
 total_revenue = 0
 # making a for loop to create a variable i that goes from 0 to len(hairstyles)
+# making a for loop to create a variable i that goes from 0 to len(hairstyles)
+#Using `range(len(hairstyles))` instead of just `len(hairstyles)` is because `len(hairstyles)` gives the total number of elements in the `hairstyles` list, which is a single integer value. However, to iterate over each element by its index, you need a sequence of numbers that starts from 0 and goes up to the length of the list minus one. 
+#`range(len(hairstyles))` generates this sequence of numbers. For example, if `hairstyles` has 8 elements, `len(hairstyles)` is `8`, but `range(len(hairstyles))` is `range(0, 8)`, which generates the numbers `0, 1, 2, 3, 4, 5, 6, 7`. These numbers are used as indices to access each element in the list during the loop.
 for i in range(len(hairstyles)):
-  # adding the product of prices[i] (the price of the haircut at index position i) and last_week[i] (the number of people who got the haircut at position i) to total_revenue
+  # multiplying the product of prices[i] (the price of the haircut at index position i[]) and last_week[i] (the number of people who got the haircut at position i) and adding them to total_revenue
   total_revenue += prices[i] * last_week[i]
 
 # printing results of total_revenue
